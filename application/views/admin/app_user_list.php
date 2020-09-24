@@ -8,9 +8,10 @@
             <thead>
                 <tr style="background-color: lavender;">
                     <th style="width: 10%;text-align: center;">#</th>
-				    <th style="width: 25%;">Full name</th>
-                    <th style="width: 25%;">Email</th>
-                    <th style="width: 35%; text-align: center;">Registered on</th>
+				    <th style="width: 20%;">Full name</th>
+                    <th style="width: 20%;">Email</th>
+                    <th style="width: 30%; text-align: center;">Registered on</th>
+                    <th style="width: 15%; text-align: center;">Total Test</th>
                 </tr>
             </thead>
             <tbody>

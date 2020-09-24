@@ -33,7 +33,7 @@
                 
                 <div class="col-md-6">
                     <i class="fa fa-refresh fa-spin" id="loader"></i>
-                    <p id="message"></p>
+                    <p id="message" class="error"><?php if(isset($message)) echo $message; ?></p>
                 </div>
                 
                 <div class="col-md-6">

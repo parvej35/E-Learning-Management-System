@@ -78,7 +78,7 @@ class App_user extends CI_Controller {
             $this->load->view('login.php');
         } else {
         
-            $STR_QUERY = "SELECT email, full_name, DATE_FORMAT(registered_on, '%d-%b-%Y at %H:%i:%s') AS registered_on, user_password FROM app_user ORDER BY full_name ASC";
+            $STR_QUERY = "SELECT au.email, au.full_name, DATE_FORMAT(au.registered_on, '%d-%b-%Y at %H:%i:%s') AS registered_on, COUNT(er.id) AS total_test  FROM app_user au LEFT JOIN evaluation_report er ON er.app_user_id = au.id GROUP BY au.email, au.full_name, registered_on ORDER BY au.full_name ASC";
 
             $query = $this->db->query($STR_QUERY);
             $app_user_list = $query->result();
@@ -90,8 +90,9 @@ class App_user extends CI_Controller {
                 $full_name = $app_user->full_name;  
                 $email = $app_user->email;                
                 $registered_on = $app_user->registered_on; 
+                $total_test = $app_user->total_test; 
 
-                $app_user_info .= "<tr><td style='text-align: center;'>".($i + 1)."</td><td>".$full_name."</td><td>".$email."</td><td style='text-align: center;'>".$registered_on."</td></tr>";
+                $app_user_info .= "<tr><td style='text-align: center;'>".($i + 1)."</td><td>".$full_name."</td><td>".$email."</td><td style='text-align: center;'>".$registered_on."</td><td style='text-align: center;'>".$total_test."</td></tr>";
             }
 
             $data["app_user_info"] = $app_user_info;

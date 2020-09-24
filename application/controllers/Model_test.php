@@ -41,13 +41,23 @@ class Model_test extends CI_Controller {
             $srt_query = "SELECT id, title, answer_1, answer_2, answer_3, answer_4, right_answer FROM questionnaire WHERE lesson_id = ".$lesson_id." AND status = 1";
 
             $ques_ans = $this->db->query($srt_query);
-            $data['ques_ans'] = $ques_ans->result_array();    
+            $data['ques_ans'] = $ques_ans->result_array();  
 
-            $data['course_id'] = $course_id;     
-            $data['lesson_id'] = $lesson_id;     
+            if(count($data['ques_ans']) == 0) {
+                $data['title'] = "Exam";
+                $data['message'] = "No question found.";   
+                $data["course_list"] = $this->common_model->get_course_list();
+
+                $this->load->view('model_test/search', $data);
+            } else {
+
+                $data['course_id'] = $course_id;     
+                $data['lesson_id'] = $lesson_id;     
+
+                $this->load->view('model_test/exam', $data);
+            }    
         } 
 
-        $this->load->view('model_test/exam', $data);
         
     }
 
