@@ -172,8 +172,8 @@
 
 	    $("#signupdiv").hide();
 		
-		$("#loginemail").val("parvej@mail.com");
-		$("#loginpassword").val("123456");
+		$("#loginemail").val("");
+		$("#loginpassword").val("");
 
 	    $(document).keypress(function (e) {
             if (e.which == 13) {
