@@ -1,0 +1,2 @@
+input[type=text].k-textbox,input[type=password].k-textbox{height:1.8em;}
+.k-textbox[type=text]:disabled,.k-textbox[type=password]:disabled,textarea:hover:disabled,textarea:disabled{background-color:#E3E3E3;border-color:#C5C5C5;color:#9F9E9E;opacity:0.7;cursor:default;outline:0 none}
