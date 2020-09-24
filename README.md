@@ -19,13 +19,13 @@ c) Only admins are allowed to manage course, lesson, and questions.<br>
 
 <b>User Credential :</b> <br>
 1) Admin : <br>
-- Email : admin@mail.com<br>
-- Password : 12345 <br>
+Email : admin@mail.com<br>
+Password : 12345
 
 2) User 1: <br>
-- Email : user1@mail.com<br>
-- Password : 12345
+Email : user1@mail.com<br>
+Password : 12345
 
 3) User 2: <br>
-- Email : user2@mail.com<br>
-- Password : 12345
+Email : user2@mail.com<br>
+Password : 12345
