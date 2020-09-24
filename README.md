@@ -1,8 +1,10 @@
-# E-Learning-Management-System
+# Project Purpose
 There will be multiple courses offered. <br>
 a) Each course will have multiple lessons. Each lesson will be 10 questions. <br>
 b) Questions will be MCQ in nature. After finishing each lesson show result of the lesson finished. <br>
-c) Only admins are allowed to manage course, lesson, and questions.<br><br>
+c) Only admins are allowed to manage course, lesson, and questions.<br>
+
+<b>This project is developed using PHP language on Codeigniter framework.</b>
 
 <b>Project Configuration :</b> <br>
 1.1) Create a new database.<br>
